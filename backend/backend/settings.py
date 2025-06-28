@@ -69,8 +69,15 @@ ROOT_URLCONF = 'backend.urls'
 
 CSRF_TRUSTED_ORIGINS = ['https://react-django-crud-app.onrender.com']
 
+# STATIC FILES
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # ✅ Collectstatic files will go here
+
+# For production (Render)
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
