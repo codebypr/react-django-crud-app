@@ -67,7 +67,7 @@ ROOT_URLCONF = 'backend.urls'
 #     "http://localhost:5173",
 # ]
 
-CSRF_TRUSTED_ORIGINS = ['https://react-django-crud-app.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://your-backend-name.onrender.com']
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
