@@ -1,7 +1,7 @@
 import os
 import django
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')  # अपने प्रोजेक्ट के अनुसार बदलें
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 django.setup()
 
 from django.contrib.auth.models import User
@@ -12,6 +12,6 @@ password = "admin123"
 
 if not User.objects.filter(username=username).exists():
     User.objects.create_superuser(username=username, email=email, password=password)
-    print("✅ Superuser created successfully!")
+    print("Superuser created ✅")
 else:
-    print("⚠️ Superuser already exists!")
+    print("Superuser already exists.")
