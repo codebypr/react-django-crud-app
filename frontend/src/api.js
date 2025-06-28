@@ -1,5 +1,8 @@
+// src/api.js
 import axios from 'axios';
 
-export default axios.create({
-    baseURL: 'https://react-django-crud-app.onrender.com/api/',
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
 });
+
+export default API;

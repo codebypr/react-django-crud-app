@@ -58,9 +58,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'corsheaders.middleware.CorsMiddleware',
-
+'whitenoise.middleware.WhiteNoiseMiddleware', 
 ]
 CORS_ALLOW_ALL_ORIGINS = True
+# settings.py
+
+CORS_ALLOWED_ORIGINS = [
+    "https://react-frontend.onrender.com",
+]
+
 
 ROOT_URLCONF = 'backend.urls'
 # CSRF_TRUSTED_ORIGINS = [
@@ -89,6 +95,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
